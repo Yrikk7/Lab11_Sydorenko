@@ -1,0 +1,66 @@
+.wrapper {
+    background-color: beige;
+    display: grid;
+    grid-template-areas:
+    "header header header nav"
+    "div2 div3 article nav"
+    "div6 div6 article nav"
+    "footer footer footer footer";
+    grid-template-rows: 30% 20% 30% 20%;
+    grid-template-columns: 25% 25% 30% 20%;
+    grid-row-gap: 3px;
+    grid-column-gap: 3px;    
+    margin: 0 ;
+    }
+    @media all and ( max-width: 575px ) {  
+    .wrapper {
+    grid-template-areas:
+    "header header"
+    "div2 nav"
+    "div3 nav"
+    "article nav"
+    "div6 nav"
+    "footer footer";
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    }
+    }    
+    header {    
+        background-color: rgb(44, 133, 171);        
+        grid-area: header;
+        float: left;
+        border: 1px slategray;
+    }
+    div2 {    
+        background-color: aquamarine;
+        grid-area: div2;
+        border: 1px slategray;
+    }
+    div3 {    
+        background-color: rgb(222, 50, 61);
+        float: left;
+        grid-area: div3;
+        border: 1px slategray;
+    }
+    article {    
+        background-color: rgb(190, 206, 73);
+        grid-area: article; 
+        border: 1px slategray;       
+    }
+    nav {    
+        background-color: rgb(76, 78, 77);
+        grid-area: nav;
+        border: 1px slategray;
+    }
+    div6 {    
+        background-color: rgb(26, 113, 35);
+        float: left;
+        grid-area: div6;
+        border: 1px slategray;
+    }
+    footer {    
+        background-color: rgb(89, 52, 22);
+        grid-area: footer;
+        border: 1px slategray;
+    }
+ 
